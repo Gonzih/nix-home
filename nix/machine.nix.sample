@@ -1,0 +1,7 @@
+{ config, pkgs, ... }:
+
+{
+  imports = [
+      ./t450.nix
+  ];
+}

@@ -2,9 +2,7 @@
 
 {
   imports = [
-      ./nix/programs.nix
-      ./nix/services.nix
-      ./nix/xorg.nix
+      ./nix/machine.nix
   ];
 
   # Let Home Manager install and manage itself.

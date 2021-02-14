@@ -1,6 +1,8 @@
 { config, pkgs, ... }:
 
 {
+  # programs.jq.enable = true;
+
   programs.ssh = {
     enable = true;
     matchBlocks = {
@@ -92,6 +94,98 @@
       mouse_bindings = [
         { mouse = "Middle"; action = "PasteSelection"; }
       ];
+    };
+  };
+
+  programs.git = {
+    enable = true;
+    aliases = {
+      co = "checkout";
+      gloc = "log --graph";
+      st = "status -s";
+      ci = "commit --verbose";
+      w = "whatchanged";
+      br = "branch";
+      hist = "!tig";
+      lg = "!git log --graph --color=always --abbrev-commit --date=relative --pretty=format:'%x00%h%x00%s%x00%cd%x00%an%x00%d' | gawk -F '\\0' '{ printf \"%s\\033[31m%s\\033[0m %-80s \\033[32m%14s\\033[0m \\033[30;1m%s\\033[0m\\033[33m%s\\n\", $1, $2, gensub(/(.{79}).{2,}/, \"\\\\1…\",\"g\",$3), $4, $5, $6 }' | less -R";
+      wdiff = "diff --color-words";
+      todo = "grep -n -e TODO -e FIXME -e XXX -e OPTIMIZE";
+    };
+    userName = "Max Gonzih";
+    userEmail = "gonzih@gmail.com";
+    signing = {
+      key =  "27E828AA8DD0ACA5";
+      signByDefault = true;
+    };
+    extraConfig = {
+      color  = {
+        diff = "auto";
+        status = "auto";
+        branch = "auto";
+        interactive = "auto";
+        ui = true;
+        pager = true;
+      };
+      core = {
+        pager = "less -FRSX";
+        whitespace = "fix,-indent-with-non-tab,trailing-space,cr-at-eol,space-before-tab";
+        excludesfile = "/home/gnzh/.gitignore.global";
+        editor = "vim";
+      };
+      apply = {
+        whitespace = "fix";
+      };
+      push = {
+        default = "simple";
+      };
+      grep = {
+        lineNumber = true;
+      };
+      help = {
+        autocorrect = 0;
+      };
+      branch = {
+        autosetuprebase = "always";
+      };
+      rebase = {
+        autostash = true;
+        instructionFormat = "(%an <%ae>) %s";
+      };
+      rerere = {
+        enabled = true;
+      };
+      lfs = {
+        enable = true;
+      };
+      "filter \"lfs\"" = {
+        reguired = true;
+        process = "git-lfs filter-process";
+        clean = "git-lfs clean -- %f";
+        smudge = "git-lfs smudge -- %f";
+      };
+      "color \"branch\"" = {
+        current = "yellow reverse";
+        local = "yellow";
+        remote = "green";
+        untracked = "cyan";
+      };
+      "color \"diff\"" = {
+        meta = "yellow bold";
+        frag = "magenta bold";
+        old = "red bold";
+        new = "green bold";
+      };
+      "color \"status\"" = {
+        added = "yellow";
+        changed = "green";
+        untracked = "cyan";
+      };
+      merge = {
+        tool = "nvim";
+      };
+      "mergetool \"nvim\"" = {
+        cmd = "nvim -f -c \"Gvdiff\" \"$MERGED\"";
+      };
     };
   };
 }

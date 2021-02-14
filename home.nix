@@ -1,6 +1,12 @@
 { config, pkgs, ... }:
 
 {
+  imports = [
+      ./nix/programs.nix
+      ./nix/services.nix
+      ./nix/xorg.nix
+  ];
+
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 

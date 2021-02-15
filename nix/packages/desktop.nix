@@ -89,9 +89,9 @@ pkgs: with pkgs; [
     winetricks
 
     # disk utils
-    hdparm
-    hddtemp
-    nvme-cli
+    #hdparm
+    #hddtemp
+    #nvme-cli
 
     python3
 

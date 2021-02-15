@@ -11,6 +11,6 @@
   ++ (import ./packages/dev.nix pkgs)
   ++ (import ./packages/desktop.nix pkgs);
 
-  programs.alacritty.settings.font.size = 7.0;
-  programs.git.signing.key = "27E828AA8DD0ACA5";
+  programs.alacritty.settings.font.size = 9.0;
+  programs.git.signing.key = "E098E40080AE48C3";
 }

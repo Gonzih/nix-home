@@ -13,17 +13,11 @@ pkgs: with pkgs; [
     killall
     wget
     curl
-    gnumake
     rsync
     zip
     unzip
     mc
     vifm
-    pcsclite
-    gnupg
-    pinentry-curses
-    pinentry-qt
-    paperkey
     pbzip2
     gotop
 

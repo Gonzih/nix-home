@@ -1,6 +1,4 @@
 pkgs: with pkgs; [
-    # basics
-    python
     # autofs5
     pprof
     graphviz
@@ -9,8 +7,6 @@ pkgs: with pkgs; [
 
     # programming
     doge
-    neovim
-    gcc
     go_1_14
     fzf
     entr
@@ -34,9 +30,6 @@ pkgs: with pkgs; [
     # networking
     nmap
 
-    # build utils
-    binutils-unwrapped
-    gnum4
 
     # aws
     s3cmd
@@ -90,7 +83,6 @@ pkgs: with pkgs; [
 
     #c++ dev deps
     ncurses
-    clang
     gdb
 
     languagetool

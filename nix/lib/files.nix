@@ -8,6 +8,9 @@
     ".vimrc" = {
       source = dotfiles/.vim/vimrc;
     };
+    ".vifm" = {
+      source = dotfiles/.vifm;
+    };
     ".config/mc" = {
       source = dotfiles/.mc;
     };

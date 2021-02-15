@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, alacrittyFontSize, alacrittyGlyphOffset, ... }:
 
 {
   #programs.jq.enable = true;
@@ -21,6 +21,7 @@
   programs.alacritty = {
     enable = true;
     settings = {
+      live_config_reload = true;
       TERM = "xterm-256color";
       window = {
         dynamic_title = true;
@@ -46,14 +47,16 @@
           family = "Victor Mono";
           style = "Italic";
         };
+        bold_italic = {
+          family = "Victor Mono";
+          style = "Bold Italic";
+        };
         offset = {
           x = 0;
           y = 0;
         };
-        glyph_offset = {
-          x = 0;
-          y = 2;
-        };
+        glyph_offset = alacrittyGlyphOffset;
+        size = alacrittyFontSize;
         use_thin_strokes = true;
       };
 

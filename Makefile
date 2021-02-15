@@ -45,3 +45,14 @@ dotfiles-pop: $(DOTFILES)
 
 gc:
 	home-manager expire-generations "-1 day"
+
+dein-installer.sh:
+	curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > dein-installer.sh
+
+.PHONY: clean
+clean:
+	rm dein-installer.sh
+
+nix/lib/dotfiles/.dein: dein-installer.sh
+	sh dein-installer.sh $@
+	$(MAKE) clean

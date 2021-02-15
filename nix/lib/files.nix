@@ -16,5 +16,6 @@ in
     ".tmux.conf".source                 = ln dotfiles/.tmux.conf;
     "bin".source                        = ln dotfiles/.bin;
     ".config/plugin-foreign-env".source = ln dotfiles/plugin-foreign-env;
+    ".cache/dein".source                = ln dotfiles/.dein;
   };
 }

@@ -17,6 +17,9 @@
   ];
   home.packages = (import ./packages/base.nix pkgs)
   ++ (import ./packages/dev.nix pkgs)
+  ++ (import ./packages/android-dev.nix pkgs)
+  ++ (import ./packages/gaming.nix pkgs)
+  ++ (import ./packages/streaming.nix pkgs)
   ++ (import ./packages/desktop.nix pkgs);
 
   programs.git.signing.key = "E098E40080AE48C3";

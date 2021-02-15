@@ -42,3 +42,6 @@ dotfiles-pull: $(DOTFILES)
 
 dotfiles-pop: $(DOTFILES)
 	$(foreach path,$(DOTFILES),cd $(shell pwd)/$(path) && git stash pop || echo "No stash";)
+
+gc:
+	home-manager expire-generations "-1 day"

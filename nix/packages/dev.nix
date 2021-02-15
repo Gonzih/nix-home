@@ -97,7 +97,5 @@ pkgs: with pkgs; [
 
     rnix-lsp
 
-    jq
-
     nodejs
 ]

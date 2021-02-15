@@ -30,9 +30,9 @@ nix/lib/dotfiles/.mutt:
 nix/lib/dotfiles/plugin-foreign-env:
 	git clone https://github.com/oh-my-fish/plugin-foreign-env.git $@
 
-dotfiles: $(DOTFILES)
+dotfiles: $(DOTFILES) nix/lib/dotfiles/.dein
 
-dotfiles-update: $(DOTFILES) dotfiles-stash dotfiles-pull dotfiles-pop
+dotfiles-update: dotfiles dotfiles-stash dotfiles-pull dotfiles-pop
 
 dotfiles-stash: $(DOTFILES)
 	$(foreach path,$(DOTFILES),cd $(shell pwd)/$(path) && git stash || echo "Nothing to stash";)

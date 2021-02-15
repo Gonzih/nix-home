@@ -1,5 +1,6 @@
 pkgs: with pkgs; [
     # autofs5
+    # jq
     pprof
     graphviz
     shellcheck

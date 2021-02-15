@@ -46,7 +46,6 @@
           family = "Victor Mono";
           style = "Italic";
         };
-        size = 7.0;
         offset = {
           x = 0;
           y = 0;

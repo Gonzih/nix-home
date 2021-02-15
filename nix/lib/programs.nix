@@ -115,7 +115,6 @@
     userName = "Max Gonzih";
     userEmail = "gonzih@gmail.com";
     signing = {
-      key =  "27E828AA8DD0ACA5";
       signByDefault = true;
     };
     extraConfig = {

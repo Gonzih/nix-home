@@ -2,13 +2,26 @@
 
 {
   home.file = {
-    # ".vim" = {
-    #   source = pkgs.fetchFromGitHub {
-    #     owner = "Gonzih";
-    #     repo = ".vim";
-    #     rev = "master";
-    #     sha256 = "1hdqimfzpynnpqc7p8m8hkcv9dlfbd8kl22979i6626nq57dvln8";
-    #   };
-    # };
+    ".vim" = {
+      source = dotfiles/.vim;
+    };
+    ".vimrc" = {
+      source = dotfiles/.vim/vimrc;
+    };
+    ".config/mc" = {
+      source = dotfiles/.mc;
+    };
+    ".config/fish" = {
+      source = dotfiles/.fish;
+    };
+    ".xmonad" = {
+      source = dotfiles/.xmonad;
+    };
+    ".mutt" = {
+      source = dotfiles/.mutt;
+    };
+    ".config/plugin-foreign-env" = {
+      source = dotfiles/plugin-foreign-env;
+    };
   };
 }

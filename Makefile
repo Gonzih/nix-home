@@ -35,10 +35,10 @@ dotfiles: $(DOTFILES)
 dotfiles-update: $(DOTFILES) dotfiles-stash dotfiles-pull dotfiles-pop
 
 dotfiles-stash: $(DOTFILES)
-	  $(foreach path,$(DOTFILES),cd $(shell pwd)/$(path) && git stash || echo "Nothing to stash";)
+	$(foreach path,$(DOTFILES),cd $(shell pwd)/$(path) && git stash || echo "Nothing to stash";)
 
 dotfiles-pull: $(DOTFILES)
-	  $(foreach path,$(DOTFILES),cd $(shell pwd)/$(path) && git pull;)
+	$(foreach path,$(DOTFILES),cd $(shell pwd)/$(path) && git pull;)
 
 dotfiles-pop: $(DOTFILES)
-	  $(foreach path,$(DOTFILES),cd $(shell pwd)/$(path) && git stash pop || echo "No stash";)
+	$(foreach path,$(DOTFILES),cd $(shell pwd)/$(path) && git stash pop || echo "No stash";)

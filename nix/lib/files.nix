@@ -23,8 +23,11 @@
     ".mutt" = {
       source = dotfiles/.mutt;
     };
-    ".config/plugin-foreign-env" = {
-      source = dotfiles/plugin-foreign-env;
+    ".gitignore.global" = {
+      source = dotfiles/.gitignore.global;
+    };
+    ".tmux.conf" = {
+      source = dotfiles/.tmux.conf;
     };
   };
 }

@@ -29,5 +29,8 @@
     ".tmux.conf" = {
       source = dotfiles/.tmux.conf;
     };
+    "bin" = {
+      source = dotfiles/.bin;
+    };
   };
 }

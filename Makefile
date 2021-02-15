@@ -1,4 +1,4 @@
-DOTFILES = nix/lib/dotfiles/.vim nix/lib/dotfiles/.vifm nix/lib/dotfiles/.mc nix/lib/dotfiles/.fish nix/lib/dotfiles/.xmonad nix/lib/dotfiles/.mutt nix/lib/dotfiles/plugin-foreign-env
+DOTFILES = nix/lib/dotfiles/.bin nix/lib/dotfiles/.vim nix/lib/dotfiles/.vifm nix/lib/dotfiles/.mc nix/lib/dotfiles/.fish nix/lib/dotfiles/.xmonad nix/lib/dotfiles/.mutt nix/lib/dotfiles/plugin-foreign-env
 
 switch: dotfiles
 	home-manager switch
@@ -11,6 +11,9 @@ nix/lib/dotfiles/.vim:
 
 nix/lib/dotfiles/.vifm:
 	git clone git@github.com:Gonzih/.vifm.git $@
+
+nix/lib/dotfiles/.bin:
+	git clone git@github.com:Gonzih/.bin.git $@
 
 nix/lib/dotfiles/.mc:
 	git clone git@github.com:Gonzih/.mc.git $@

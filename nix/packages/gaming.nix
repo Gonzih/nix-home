@@ -11,9 +11,5 @@ pkgs: with pkgs; [
     # nethack-qt
     # ioquake3
     # minecraft
-    multimc
-    libva
-    libva-utils
-    pkgsi686Linux.libva
-    dwarf-fortress-packages.dwarf-fortress-full
+    # multimc
 ]

@@ -1,7 +1,7 @@
 { config, pkgs, alacrittyFontSize, alacrittyGlyphOffset, ... }:
 
 {
-  #programs.jq.enable = true;
+  programs.jq.enable = true;
   programs.htop.enable = true;
 
   programs.ssh = {

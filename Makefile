@@ -53,6 +53,7 @@ dein-installer.sh:
 clean:
 	rm dein-installer.sh
 
-nix/lib/dotfiles/.dein: dein-installer.sh
+nix/lib/dotfiles/.dein:
+	$(MAKE) dein-installer.sh
 	sh dein-installer.sh $@
 	$(MAKE) clean

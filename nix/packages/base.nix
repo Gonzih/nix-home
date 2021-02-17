@@ -1,4 +1,5 @@
 pkgs: with pkgs; [
+    neovim
     tmux
     tmux-cssh
     htop

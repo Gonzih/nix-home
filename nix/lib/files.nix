@@ -7,6 +7,7 @@ in
   home.file = {
     ".vim".source                       = ln dotfiles/.vim;
     ".vimrc".source                     = ln dotfiles/.vim/vimrc;
+    ".config/nvim/init.vim".source      = ln dotfiles/.vim/vimrc;
     ".vifm".source                      = ln dotfiles/.vifm;
     ".config/mc".source                 = ln dotfiles/.mc;
     ".config/fish".source               = ln dotfiles/.fish;

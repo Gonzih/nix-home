@@ -91,4 +91,6 @@ pkgs: with pkgs; [
     rnix-lsp
 
     nodejs
+
+    go-air
 ]

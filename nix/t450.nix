@@ -14,6 +14,7 @@
       ./lib/services.nix
       ./lib/xorg.nix
       ./lib/fonts.nix
+      ./lib/overlays/overlays.nix
   ];
   home.packages = (import ./packages/base.nix pkgs)
   ++ (import ./packages/dev.nix pkgs)

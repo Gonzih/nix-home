@@ -1,3 +1,4 @@
 nix/machine.nix
 nix/lib/dotfiles/
 result
+tmp/

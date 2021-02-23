@@ -107,4 +107,6 @@ pkgs: with pkgs; [
     bc
 
     calibre
+
+    appimage-run
 ]

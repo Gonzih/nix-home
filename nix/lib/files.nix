@@ -18,5 +18,6 @@ in
     "bin".source                        = ln dotfiles/.bin;
     ".config/plugin-foreign-env".source = ln dotfiles/plugin-foreign-env;
     ".cache/dein".source                = ln dotfiles/.dein;
+    ".config/rofi/config.rasi".source   = ln dotfiles/.config.rasi;
   };
 }

@@ -93,4 +93,9 @@ pkgs: with pkgs; [
     nodejs
 
     go-air
+
+    # scala
+    sbt
+    bloop
+    metals
 ]

@@ -97,5 +97,5 @@ pkgs: with pkgs; [
     # scala
     sbt
     bloop
-    metals
+    metals-latest
 ]

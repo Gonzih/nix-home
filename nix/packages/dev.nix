@@ -98,4 +98,5 @@ pkgs: with pkgs; [
     sbt
     bloop
     metals-latest
+    ammonite
 ]

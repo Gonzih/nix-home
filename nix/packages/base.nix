@@ -2,7 +2,6 @@ pkgs: with pkgs; [
     neovim
     tmux
     tmux-cssh
-    htop
     mosh
     which
     tig
@@ -16,7 +15,6 @@ pkgs: with pkgs; [
     rsync
     zip
     unzip
-    mc
     vifm
     pbzip2
     gotop

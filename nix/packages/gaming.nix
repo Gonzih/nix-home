@@ -10,6 +10,6 @@ pkgs: with pkgs; [
     # dwarf-fortress-packages.dwarf-fortress-full
     # nethack-qt
     # ioquake3
-    # minecraft
+    minecraft
     # multimc
 ]

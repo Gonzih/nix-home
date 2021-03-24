@@ -6,7 +6,6 @@ pkgs: with pkgs; [
     mosh
     which
     tig
-    fish
     git
     git-lfs
     git-crypt

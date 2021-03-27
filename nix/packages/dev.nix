@@ -99,4 +99,7 @@ pkgs: with pkgs; [
     bloop
     metals-latest
     ammonite
+
+    # haskell
+    haskellPackages.haskell-language-server
 ]

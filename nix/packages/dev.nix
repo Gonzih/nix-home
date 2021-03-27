@@ -101,5 +101,6 @@ pkgs: with pkgs; [
     ammonite
 
     # haskell
+    ghc
     haskellPackages.haskell-language-server
 ]

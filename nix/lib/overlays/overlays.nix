@@ -19,7 +19,7 @@
       };
       metals-latest = pkgs.metals.overrideAttrs(old: rec {
         pname = "metals";
-        version = "0.10.0";
+        version = "0.10.2";
 
         deps = pkgs.metals.deps.overrideAttrs(old: {
           name = "${pname}-deps-${version}";
@@ -31,7 +31,7 @@
             mkdir -p $out/share/java
             cp -n $(< deps) $out/share/java/
           '';
-          outputHash     = "1v9br6nad6yhq9y1z4b9z6xdsjrgqh7wlxww7vp7ws28cg85mqyg";
+          outputHash     = "1yck935pcj9cg3qxzrmvgd16afsckz8wgmzf2rlmii2c1glrbq9c";
         });
         buildInputs = [ pkgs.jdk deps ];
       });

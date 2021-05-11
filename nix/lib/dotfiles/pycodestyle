@@ -1,0 +1,5 @@
+[pycodestyle]
+count = False
+ignore =
+max-line-length = 160
+statistics = True

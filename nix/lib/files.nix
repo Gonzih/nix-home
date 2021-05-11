@@ -20,5 +20,6 @@ in
     ".cache/dein".source                          = ln dotfiles/.dein;
     ".config/rofi/config.rasi".source             = ln dotfiles/.rofi/config.rasi;
     ".config/rofi/gruvbox-common.inc.rasi".source = ln dotfiles/.rofi/gruvbox-common.inc.rasi;
+    ".config/pycodestyle".source                  = ln dotfiles/pycodestyle;
   };
 }

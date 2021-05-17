@@ -92,20 +92,18 @@ pkgs: with pkgs; [
 
     nodejs
 
-    go-air
-
     # scala
     sbt
     bloop
     metals-latest
-    ammonite
+    # ammonite
 
     # haskell
-    ghc
-    haskellPackages.haskell-language-server
+    # ghc
+    # haskellPackages.haskell-language-server
 
+    python38Packages.pip
     python38Packages.pyls-black
     python38Packages.pyls-isort
     python38Packages.pyls-mypy
-    python38Packages.python-language-server
 ]

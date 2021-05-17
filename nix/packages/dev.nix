@@ -96,13 +96,10 @@ pkgs: with pkgs; [
     sbt
     bloop
     metals-latest
-    # ammonite
-
-    # haskell
-    # ghc
-    # haskellPackages.haskell-language-server
 
     python38Packages.pip
+    python38Packages.python-language-server
+
     python38Packages.pyls-black
     python38Packages.pyls-isort
     python38Packages.pyls-mypy

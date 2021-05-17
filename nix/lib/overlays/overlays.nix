@@ -3,17 +3,6 @@
 {
   nixpkgs.overlays =
     [ (self: super: {
-      # python-lsp-server = pkgs.python38Packages.buildPythonPackage rec {
-      #   pname = "python-lsp-server";
-      #   version = "1.0.1";
-
-      #   src = super.python38.fetchPipy {
-      #     pname = "python-lsp-server[all]";
-      #     version = "${version}";
-      #     sha256 = "7394ba7f272ae722a74f3d969dcf599bc4ef093bc392038748a490f1724a515d";
-      #     extension = "tar.bz2";
-      #   };
-      # };
       go-air = pkgs.buildGoModule rec {
         pname = "air";
         version = "1.15.1";
@@ -28,6 +17,7 @@
         vendorSha256 = "0k28rxnd0vyb6ljbi83bm1gl7j4r660a3ckjxnzc2qzwvfj69g53";
         subPackages = [ "." ];
       };
+
       metals-latest = pkgs.metals.overrideAttrs(old: rec {
         pname = "metals";
         version = "0.10.2";

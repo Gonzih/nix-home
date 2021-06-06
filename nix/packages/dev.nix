@@ -103,4 +103,7 @@ pkgs: with pkgs; [
     python38Packages.pyls-black
     python38Packages.pyls-isort
     python38Packages.pyls-mypy
+
+    # kube shit
+    k9s
 ]

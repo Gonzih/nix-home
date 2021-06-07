@@ -106,4 +106,6 @@ pkgs: with pkgs; [
 
     # kube shit
     k9s
+
+    nodePackages.typescript-language-server
 ]

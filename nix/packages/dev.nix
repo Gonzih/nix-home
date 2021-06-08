@@ -108,4 +108,5 @@ pkgs: with pkgs; [
     k9s
 
     nodePackages.typescript-language-server
+    nodePackages.lerna
 ]

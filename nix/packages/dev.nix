@@ -35,6 +35,7 @@ pkgs: with pkgs; [
     # aws
     s3cmd
     aws
+    nodePackages.firebase-tools
 
     redis
 

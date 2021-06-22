@@ -191,6 +191,9 @@
       "mergetool \"nvim\"" = {
         cmd = "nvim -f -c \"Gvdiff\" \"$MERGED\"";
       };
+      init = {
+        defaultBranch = "main";
+      };
     };
   };
 }

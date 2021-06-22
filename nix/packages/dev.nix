@@ -8,7 +8,7 @@ pkgs: with pkgs; [
 
     # programming
     doge
-    go_1_14
+    go_1_16
     fzf
     entr
     rustup

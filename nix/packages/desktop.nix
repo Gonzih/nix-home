@@ -54,7 +54,7 @@ pkgs: with pkgs; [
     xcompmgr
 
     # audio
-    pulseeffects
+    pulseeffects-pw
     pavucontrol
 
     # networks FSs
@@ -80,10 +80,10 @@ pkgs: with pkgs; [
     # libappindicator-gtk3
 
     # bluetooth
-    kdeFrameworks.bluez-qt
+    libsForQt5.bluez-qt
 
     # kde crap
-    plasma5.user-manager
+    #plasma5.user-manager
 
     # wine
     winetricks

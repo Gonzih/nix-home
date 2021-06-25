@@ -32,6 +32,9 @@ pkgs: with pkgs; [
     yubikey-manager
     mkpasswd
 
+    # fonts
+    iosevka
+
     # etc
     wavemon
 

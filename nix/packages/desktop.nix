@@ -6,6 +6,7 @@ pkgs: with pkgs; [
     redshift
     firefox
     chromium
+    brave
     thunderbird
 
     # mouse

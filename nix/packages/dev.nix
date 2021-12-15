@@ -99,11 +99,11 @@ pkgs: with pkgs; [
     metals-latest
 
     python38Packages.pip
-    python38Packages.python-language-server
+    # python38Packages.python-language-server
 
-    python38Packages.pyls-black
-    python38Packages.pyls-isort
-    python38Packages.pyls-mypy
+    # python38Packages.pyls-black
+    # python38Packages.pyls-isort
+    # python38Packages.pyls-mypy
 
     # kube shit
     k9s

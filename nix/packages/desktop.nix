@@ -20,7 +20,7 @@ pkgs: with pkgs; [
     tdesktop
     signal-desktop
     slack
-    element
+    element-desktop
 
     # storage
     rclone

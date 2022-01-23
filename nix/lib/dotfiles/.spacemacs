@@ -53,10 +53,22 @@ This function should only modify configuration layer settings."
      spell-checking
      syntax-checking
      version-control
+     ;; treemacs
      rust
      (go :variables go-tab-width 4 go-format-before-save t)
-     (python :variables python-poetry-activate tpython-backend 'lsp python-lsp-server 'pylsp)
-     treemacs
+     (python :variables python-poetry-activate t python-backend 'lsp python-lsp-server 'pylsp)
+     yaml
+     ;; c-c++
+     ;; clojure
+     ;; scala
+     ;; julia
+     sql
+     graphql
+     html
+     json
+     ;; javascript
+     typescript
+     solidity
      (keyboard-layout :variables kl-layout 'dvp))
 
 

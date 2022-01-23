@@ -69,6 +69,7 @@ This function should only modify configuration layer settings."
      ;; javascript
      typescript
      solidity
+     markdown
      (keyboard-layout :variables kl-layout 'dvp))
 
 

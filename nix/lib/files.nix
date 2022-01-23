@@ -22,6 +22,5 @@ in
     ".config/rofi/gruvbox-common.inc.rasi".source = ln dotfiles/.rofi/gruvbox-common.inc.rasi;
     ".config/pycodestyle".source                  = ln dotfiles/pycodestyle;
     ".spacemacs".source                           = ln dotfiles/.spacemacs;
-    ".spacemacs.env".source                       = ln dotfiles/.spacemacs.env;
   };
 }

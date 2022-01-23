@@ -57,6 +57,7 @@ This function should only modify configuration layer settings."
      go
      python
      treemacs
+     vinegar
      (keyboard-layout :variables kl-layout 'dvp))
 
 
@@ -547,6 +548,7 @@ dump."
   (define-key evil-motion-state-map "_" 'evil-first-non-blank)
   (define-key evil-motion-state-map "-" 'evil-end-of-line)
   (define-key evil-insert-state-map (kbd "C-c") 'evil-normal-state)
+  (define-key evil-motion-state-map (kbd "C-i") 'dired-jump)
   (define-key evil-motion-state-map ";" 'evil-ex))
 
 (defun dotspacemacs/user-config ()

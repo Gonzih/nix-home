@@ -54,7 +54,7 @@ This function should only modify configuration layer settings."
      syntax-checking
      version-control
      rust
-     go
+     (go :variables go-tab-width 4)
      python
      treemacs
      (keyboard-layout :variables kl-layout 'dvp))

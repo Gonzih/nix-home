@@ -1,5 +1,6 @@
 pkgs: with pkgs; [
     neovim
+    emacs
     tmux
     tmux-cssh
     mosh

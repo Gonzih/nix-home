@@ -544,6 +544,8 @@ dump."
 
 
 (defun gnzh/remap-evil-abit ()
+  (define-key evil-motion-state-map "_" 'evil-first-non-blank)
+  (define-key evil-motion-state-map "-" 'evil-end-of-line)
   (define-key evil-insert-state-map (kbd "C-c") 'evil-normal-state)
   (define-key evil-motion-state-map ";" 'evil-ex))
 
@@ -553,7 +555,7 @@ This function is called at the very end of Spacemacs startup, after layer
 configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
-  )
+  (gnzh/remap-evil-abit))
 
 
 ;; Do not write anything past this comment. This is where Emacs will

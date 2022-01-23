@@ -55,7 +55,7 @@ This function should only modify configuration layer settings."
      version-control
      rust
      (go :variables go-tab-width 4)
-     python
+     (python :variables python-poetry-activate tpython-backend 'lsp python-lsp-server 'pylsp)
      treemacs
      (keyboard-layout :variables kl-layout 'dvp))
 

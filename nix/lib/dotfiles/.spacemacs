@@ -57,7 +57,6 @@ This function should only modify configuration layer settings."
      go
      python
      treemacs
-     vinegar
      (keyboard-layout :variables kl-layout 'dvp))
 
 
@@ -545,11 +544,34 @@ dump."
 
 
 (defun gnzh/remap-evil-abit ()
+  (define-key evil-window-map "d" 'evil-window-left)
+  (define-key evil-window-map "D" 'evil-window-move-far-left)
+  (define-key evil-window-map "h" 'evil-window-down)
+  (define-key evil-window-map "H" 'evil-window-move-very-bottom)
+  (define-key evil-window-map "t" 'evil-window-up)
+  (define-key evil-window-map "T" 'evil-window-move-very-top)
+  (define-key evil-window-map "n" 'evil-window-right)
+  (define-key evil-window-map "N" 'evil-window-move-far-right)
+
   (define-key evil-motion-state-map "_" 'evil-first-non-blank)
   (define-key evil-motion-state-map "-" 'evil-end-of-line)
   (define-key evil-insert-state-map (kbd "C-c") 'evil-normal-state)
   (define-key evil-motion-state-map (kbd "C-i") 'dired-jump)
   (define-key evil-motion-state-map ";" 'evil-ex))
+
+(defun gnzh/remap-dired-abit ()
+  (eval-after-load 'dired
+    '(progn
+       ;; use the standard Dired bindings as a base
+       (evil-make-overriding-map dired-mode-map 'normal t)
+       (evil-define-key 'normal dired-mode-map
+         "d" 'evil-backward-char
+         "h" 'evil-next-line
+         "t" 'evil-previous-line
+         "n" 'evil-forward-char
+         "H" 'dired-goto-file
+         "T" 'dired-do-kill-lines
+         "r" 'dired-do-redisplay))) )
 
 (defun dotspacemacs/user-config ()
   "Configuration for user code:
@@ -557,7 +579,8 @@ This function is called at the very end of Spacemacs startup, after layer
 configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
-  (gnzh/remap-evil-abit))
+  (gnzh/remap-evil-abit)
+  (gnzh/remap-dired-abit))
 
 
 ;; Do not write anything past this comment. This is where Emacs will

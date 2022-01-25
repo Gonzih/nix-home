@@ -15,6 +15,7 @@ pkgs: with pkgs; [
     rust-analyzer
     clojure
     clojure-lsp
+    nixfmt
 
     # build
     pkg-config

@@ -16,4 +16,8 @@
       night = 2200;
     };
   };
+
+  services.emacs = {
+    enable = true;
+  };
 }

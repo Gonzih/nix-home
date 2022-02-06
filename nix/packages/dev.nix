@@ -1,115 +1,114 @@
-pkgs: with pkgs; [
-    # autofs5
-    # jq
-    pprof
-    graphviz
-    shellcheck
-    cmake
+pkgs:
+with pkgs; [
+  # autofs5
+  # jq
+  pprof
+  graphviz
+  shellcheck
+  cmake
 
-    # programming
-    doge
-    go_1_16
-    fzf
-    entr
-    rustup
-    rust-analyzer
-    clojure
-    clojure-lsp
-    nixfmt
+  # programming
+  doge
+  go_1_16
+  fzf
+  entr
+  rustup
+  rust-analyzer
+  clojure
+  clojure-lsp
+  nixfmt
 
-    # build
-    pkg-config
+  # build
+  pkg-config
 
-    # nix tools
-    nix-review
+  # nix tools
+  nix-review
 
-    # postgres tools
-    postgresql_11
+  # postgres tools
+  postgresql_11
 
-    # docker
-    docker-compose
+  # docker
+  docker-compose
 
-    # networking
-    nmap
+  # networking
+  nmap
 
+  # aws
+  s3cmd
+  aws
+  nodePackages.firebase-tools
 
-    # aws
-    s3cmd
-    aws
-    nodePackages.firebase-tools
+  redis
 
-    redis
+  # keyboard
+  # qmk_firmware
 
-    # keyboard
-    # qmk_firmware
+  bat
+  hexyl
 
-    bat
-    hexyl
+  sysbench
 
-    sysbench
+  # vulkan tools
+  # vulkan-tools
+  # vulkan-headers
+  # vulkan-loader
 
-    # vulkan tools
-    # vulkan-tools
-    # vulkan-headers
-    # vulkan-loader
+  # x11 stuff
+  xorg.libX11
 
-    # x11 stuff
-    xorg.libX11
+  # alsa
+  alsaLib
 
-    # alsa
-    alsaLib
+  # arduino
+  # arduino-mk
+  # avrdude
+  # python27Packages.pyserial
 
-    # arduino
-    # arduino-mk
-    # avrdude
-    # python27Packages.pyserial
+  # ew
+  nodejs
 
-    # ew
-    nodejs
+  # cura
+  # cura octoprint dep
+  # python37Packages.netifaces
+  # blender
+  # slic3r
+  # openscad
 
-    # cura
-    # cura octoprint dep
-    # python37Packages.netifaces
-    # blender
-    # slic3r
-    # openscad
+  bear
+  wireguard
+  qrencode
+  tcpdump
 
+  hugo
 
-    bear
-    wireguard
-    qrencode
-    tcpdump
+  inotify-tools
 
-    hugo
+  #c++ dev deps
+  ncurses
+  gdb
 
-    inotify-tools
+  languagetool
 
-    #c++ dev deps
-    ncurses
-    gdb
+  rnix-lsp
 
-    languagetool
+  nodejs
 
-    rnix-lsp
+  # scala
+  sbt
+  bloop
+  metals-latest
 
-    nodejs
+  python38Packages.pip
+  # python38Packages.python-language-server
 
-    # scala
-    sbt
-    bloop
-    metals-latest
+  # python38Packages.pyls-black
+  # python38Packages.pyls-isort
+  # python38Packages.pyls-mypy
 
-    python38Packages.pip
-    # python38Packages.python-language-server
+  # kube shit
+  k9s
 
-    # python38Packages.pyls-black
-    # python38Packages.pyls-isort
-    # python38Packages.pyls-mypy
-
-    # kube shit
-    k9s
-
-    nodePackages.typescript-language-server
-    nodePackages.lerna
-    nodePackages.yarn
+  nodePackages.typescript-language-server
+  # nodePackages.lerna
+  nodePackages.yarn
 ]

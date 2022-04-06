@@ -111,4 +111,6 @@ with pkgs; [
   nodePackages.typescript-language-server
   # nodePackages.lerna
   nodePackages.yarn
+
+  netlify-cli
 ]

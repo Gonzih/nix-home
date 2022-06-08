@@ -9,7 +9,7 @@ with pkgs; [
 
   # programming
   doge
-  go_1_16
+  go_1_18
   fzf
   entr
   rustup
@@ -75,7 +75,7 @@ with pkgs; [
   # openscad
 
   bear
-  wireguard
+  wireguard-tools
   qrencode
   tcpdump
 

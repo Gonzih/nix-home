@@ -106,13 +106,13 @@ with pkgs; [
   # python38Packages.pyls-mypy
 
   # kube shit
-  k9s
+  # k9s
 
   nodePackages.typescript-language-server
   # nodePackages.lerna
   nodePackages.prettier
-  nodePackages.eslint
-  nodePackages.yarn
+  # nodePackages.eslint
+  # nodePackages.yarn
 
   netlify-cli
 ]

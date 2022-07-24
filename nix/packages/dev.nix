@@ -110,6 +110,8 @@ with pkgs; [
 
   nodePackages.typescript-language-server
   # nodePackages.lerna
+  nodePackages.prettier
+  nodePackages.eslint
   nodePackages.yarn
 
   netlify-cli

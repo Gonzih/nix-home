@@ -115,4 +115,6 @@ with pkgs; [
   # nodePackages.yarn
 
   netlify-cli
+  deno
+  electron
 ]

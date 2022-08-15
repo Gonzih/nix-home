@@ -98,7 +98,8 @@ with pkgs; [
   bloop
   metals-latest
 
-  python38Packages.pip
+  python39Packages.pip
+  poetry
   # python38Packages.python-language-server
 
   # python38Packages.pyls-black

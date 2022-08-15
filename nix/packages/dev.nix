@@ -117,4 +117,5 @@ with pkgs; [
   netlify-cli
   deno
   electron
+  vscode
 ]

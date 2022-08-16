@@ -100,7 +100,7 @@ with pkgs; [
 
   python39Packages.pip
   poetry
-  python39Packages.conda
+  conda
   python39Packages.toml
   python39Packages.yapf
   # python38Packages.python-language-server

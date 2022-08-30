@@ -122,4 +122,6 @@ with pkgs; [
   deno
   electron
   vscode
+
+  ispell
 ]

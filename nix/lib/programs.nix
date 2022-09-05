@@ -8,7 +8,7 @@
     enable = true;
     matchBlocks = {
       "home-network" = {
-        hostname = "192.168.2.*";
+        hostname = "10.0.0.*";
         forwardAgent = true;
         forwardX11 = false;
       };
@@ -67,36 +67,37 @@
           background = "0x000000";
           foreground = "0xffffff";
         };
-        cursor= {
-          text   = "0xF81CE5";
+        cursor = {
+          text = "0xF81CE5";
           cursor = "0xffffff";
         };
 
         normal = {
-          black   = "0x000000";
-          red     = "0xfe0100";
-          green   = "0x33ff00";
-          yellow  = "0xfeff00";
-          blue    = "0x0066ff";
+          black = "0x000000";
+          red = "0xfe0100";
+          green = "0x33ff00";
+          yellow = "0xfeff00";
+          blue = "0x0066ff";
           magenta = "0xcc00ff";
-          cyan    = "0x00ffff";
-          white   = "0xd0d0d0";
+          cyan = "0x00ffff";
+          white = "0xd0d0d0";
         };
 
         bright = {
-          black   = "0x808080";
-          red     = "0xfe0100";
-          green   = "0x33ff00";
-          yellow  = "0xfeff00";
-          blue    = "0x0066ff";
+          black = "0x808080";
+          red = "0xfe0100";
+          green = "0x33ff00";
+          yellow = "0xfeff00";
+          blue = "0x0066ff";
           magenta = "0xcc00ff";
-          cyan    = "0x00ffff";
-          white   = "0xFFFFFF";
+          cyan = "0x00ffff";
+          white = "0xFFFFFF";
         };
       };
-      mouse_bindings = [
-        { mouse = "Middle"; action = "PasteSelection"; }
-      ];
+      mouse_bindings = [{
+        mouse = "Middle";
+        action = "PasteSelection";
+      }];
     };
   };
 
@@ -110,17 +111,16 @@
       w = "whatchanged";
       br = "branch";
       hist = "!tig";
-      lg = "!git log --graph --color=always --abbrev-commit --date=relative --pretty=format:'%x00%h%x00%s%x00%cd%x00%an%x00%d' | gawk -F '\\0' '{ printf \"%s\\033[31m%s\\033[0m %-80s \\033[32m%14s\\033[0m \\033[30;1m%s\\033[0m\\033[33m%s\\n\", $1, $2, gensub(/(.{79}).{2,}/, \"\\\\1…\",\"g\",$3), $4, $5, $6 }' | less -R";
+      lg = ''
+        !git log --graph --color=always --abbrev-commit --date=relative --pretty=format:'%x00%h%x00%s%x00%cd%x00%an%x00%d' | gawk -F '\0' '{ printf "%s\033[31m%s\033[0m %-80s \033[32m%14s\033[0m \033[30;1m%s\033[0m\033[33m%s\n", $1, $2, gensub(/(.{79}).{2,}/, "\\1…","g",$3), $4, $5, $6 }' | less -R'';
       wdiff = "diff --color-words";
       todo = "grep -n -e TODO -e FIXME -e XXX -e OPTIMIZE";
     };
     userName = "Max Gonzih";
     userEmail = "gonzih@gmail.com";
-    signing = {
-      signByDefault = true;
-    };
+    signing = { signByDefault = true; };
     extraConfig = {
-      color  = {
+      color = {
         diff = "auto";
         status = "auto";
         branch = "auto";
@@ -130,38 +130,23 @@
       };
       core = {
         pager = "less -FRSX";
-        whitespace = "fix,-indent-with-non-tab,trailing-space,cr-at-eol,space-before-tab";
+        whitespace =
+          "fix,-indent-with-non-tab,trailing-space,cr-at-eol,space-before-tab";
         excludesfile = "/home/gnzh/.gitignore.global";
         editor = "vim";
       };
-      apply = {
-        whitespace = "fix";
-      };
-      push = {
-        default = "simple";
-      };
-      pull = {
-        rebase = true;
-      };
-      grep = {
-        lineNumber = true;
-      };
-      help = {
-        autocorrect = 0;
-      };
-      branch = {
-        autosetuprebase = "always";
-      };
+      apply = { whitespace = "fix"; };
+      push = { default = "simple"; };
+      pull = { rebase = true; };
+      grep = { lineNumber = true; };
+      help = { autocorrect = 0; };
+      branch = { autosetuprebase = "always"; };
       rebase = {
         autostash = true;
         instructionFormat = "(%an <%ae>) %s";
       };
-      rerere = {
-        enabled = true;
-      };
-      lfs = {
-        enable = true;
-      };
+      rerere = { enabled = true; };
+      lfs = { enable = true; };
       "filter \"lfs\"" = {
         reguired = true;
         process = "git-lfs filter-process";
@@ -185,15 +170,9 @@
         changed = "green";
         untracked = "cyan";
       };
-      merge = {
-        tool = "nvim";
-      };
-      "mergetool \"nvim\"" = {
-        cmd = "nvim -f -c \"Gvdiff\" \"$MERGED\"";
-      };
-      init = {
-        defaultBranch = "main";
-      };
+      merge = { tool = "nvim"; };
+      "mergetool \"nvim\"" = { cmd = ''nvim -f -c "Gvdiff" "$MERGED"''; };
+      init = { defaultBranch = "main"; };
     };
   };
 }

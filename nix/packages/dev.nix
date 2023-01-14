@@ -124,4 +124,6 @@ with pkgs; [
   vscode
 
   ispell
+  zig
+  zls
 ]
